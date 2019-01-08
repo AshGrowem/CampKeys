@@ -4,7 +4,7 @@
 
 ## About
 
-:warning: This is a WIP, GUI is in development! :bowtie:
+> :warning: This is a WIP, GUI is in development! :bowtie:
 
 An open source, non-coder-friendly app for Mac-style Boot Camp shortcuts. Made with :purple_heart: using [AutoHotkey](https://www.autohotkey.com/)!
 
@@ -22,7 +22,7 @@ https://github.com/ashrafhadden/CampKeys/releases/download/v0.1.0/CampKeys.exe
 
 ## Supported Keyboard Shortcuts
 
-Based on [official Apple documentation](https://support.apple.com/en-us/HT201236) for Mac Keyboard Shortcuts
+:information_source: Based on [official Apple documentation](https://support.apple.com/en-us/HT201236) for Mac Keyboard Shortcuts
 
 ### (Not included in [docs](https://support.apple.com/en-us/HT201236))
 

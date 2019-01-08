@@ -1,14 +1,14 @@
 # Roadmap - Full List of Supported Keyboard Shortcuts
 
-> :information_source: Based on [official Apple documentation](https://support.apple.com/en-us/HT201236) for Mac Keyboard Shortcuts.
+:information_source: Based on [official Apple documentation](https://support.apple.com/en-us/HT201236) for Mac Keyboard Shortcuts.
 
-_\* = Supported by Key Remapping (ex. Command-C is supported because the Left-Command key is remapped to Right-Control, and Control-C is already a Windows shortcut)_
+\* = Supported by Key Remapping (ex. Command-C is supported because the Left-Command key is remapped to Right-Control, and Control-C is already a Windows shortcut)
 
-_:question: = Stumped, tried and failed, PR's welcome!_
+:question: = Stumped, tried and failed, PR's welcome!
 
-## Not included in [docs](https://support.apple.com/en-us/HT201236))
+## (Not included in [docs](https://support.apple.com/en-us/HT201236))
 
-> These are shortcuts that aren't included in the official docs, but are still built-in to all Macs
+These are shortcuts that aren't included in the official docs, but are still built-in to all Macs
 
 - F3: Mission Control (activates windows Task View)
 - F4: Launchpad (windows Start Menu)
@@ -43,7 +43,7 @@ _:question: = Stumped, tried and failed, PR's welcome!_
 
 ## Sleep, log out, and shut down shortcuts
 
-> :question: Could use help on this one! Potential solutions: https://autohotkey.com/board/topic/94147-catching-keyboards-power-button-intercept-shutdown/
+> :question: Could use help on these! Potential solutions: https://autohotkey.com/board/topic/94147-catching-keyboards-power-button-intercept-shutdown/
 
 - [ ] **Power button**: Press to turn on your Mac or wake it from sleep. Press and hold for 1.5 seconds to put your Mac to sleep.\_ Continue holding to force your Mac to turn off.
 - [ ] **Option-Command-Power button**\* or **Option-Command-Media Eject**: Put your Mac to sleep.

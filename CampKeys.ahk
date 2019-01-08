@@ -14,10 +14,8 @@ Menu, Tray, Tip, CampKeys
 ;; Admin Priveleges
 ; https://autohotkey.com/docs/commands/Run.htm#RunAs
 full_command_line := DllCall("GetCommandLine", "str")
-if not (A_IsAdmin or RegExMatch(full_command_line, " /restart(?!\S)"))
-{
-    try
-    {
+if not (A_IsAdmin or RegExMatch(full_command_line, " /restart(?!\S)")) {
+    try {
         if A_IsCompiled {
 					  Run *RunAs "%A_ScriptFullPath%" /restart
 				}
