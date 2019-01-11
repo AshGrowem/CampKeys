@@ -8,7 +8,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Windows Shortcut Docs: https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts
 
 ;; Tray Icon & Tip
-Menu, Tray, Icon, CampKeys.ico
+; Menu, Tray, Icon, CampKeys.ico ; Commented out to prevent "Error: Can't load icon", requires pre-compile removal
 Menu, Tray, Tip, CampKeys
 
 ;; Admin Priveleges
