@@ -4,7 +4,7 @@
 
 ## About
 
-An open source, non-coder-friendly app for Mac-style Boot Camp shortcuts. Made with :purple_heart: using [AutoHotkey](https://www.autohotkey.com/)!
+An open source app for Mac-style Boot Camp shortcuts. Made with :purple_heart: using [AutoHotkey](https://www.autohotkey.com/)!
 
 Contributions and feedback are more than welcome!
 
