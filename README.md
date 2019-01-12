@@ -4,8 +4,6 @@
 
 ## About
 
-> :warning: This is a WIP, GUI is in development! :bowtie:
-
 An open source, non-coder-friendly app for Mac-style Boot Camp shortcuts. Made with :purple_heart: using [AutoHotkey](https://www.autohotkey.com/)!
 
 Contributions and feedback are more than welcome!
