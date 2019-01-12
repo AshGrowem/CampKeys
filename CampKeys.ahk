@@ -7,16 +7,26 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Windows Shortcut Docs: https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts
 
-;; Tray Icon & Tip
 ; Menu, Tray, Icon, CampKeys.ico ; Commented out to prevent "Error: Can't load icon", requires pre-compile removal
-Menu, Tray, Tip, CampKeys
+
+;; Reload Script on Left-Click Tray Icon
+OnMessage(0x404, "AHK_NOTIFYICON")
+AHK_NOTIFYICON(wParam, lParam, uMsg, hWnd)
+{
+	if (lParam = 0x201) { ;WM_LBUTTONDOWN := 0x201
+		Reload
+	}
+}
 
 ;; Admin Priveleges
 ; https://autohotkey.com/docs/commands/Run.htm#RunAs
 full_command_line := DllCall("GetCommandLine", "str")
-if not (A_IsAdmin or RegExMatch(full_command_line, " /restart(?!\S)")) {
-    try {
-        if A_IsCompiled {
+if not (A_IsAdmin or RegExMatch(full_command_line, " /restart(?!\S)"))
+{
+    try
+		{
+        if A_IsCompiled
+				{
 					  Run *RunAs "%A_ScriptFullPath%" /restart
 				}
         else {
@@ -28,23 +38,29 @@ if not (A_IsAdmin or RegExMatch(full_command_line, " /restart(?!\S)")) {
 		ExitApp
 }
 
-;; Reload Script on Left-Click Tray Icon
-OnMessage(0x404, "AHK_NOTIFYICON")
-AHK_NOTIFYICON(wParam, lParam, uMsg, hWnd) {
-	if (lParam = 0x201) { ;WM_LBUTTONDOWN := 0x201
-		Reload
-	}
+;; Remap LCmd w/ RCtrl in Registry
+RegRead, Remap_LCmdRCtrl, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout, Scancode Map
+If Remap_LCmdRCtrl != 0000000000000000020000001de05be000000000
+{
+	RegWrite, REG_BINARY, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout, Scancode Map, 0000000000000000020000001de05be000000000
+	MsgBox Logout for key remap, Please logout or restart your computer in order for the key remap (LCmd to RCtrl) to take effect.`nThis is necessary for CampKeys to function properly.
+	TrayTip Logout for key remap, Please logout or restart your computer in order for the key remap (LCmd to RCtrl) to take effect.`nThis is necessary for CampKeys to function properly.,, 1
 }
 
-;; Remap LCmd w/ RCtrl in Registry
-RegRead, Remap_LCmd_RCtrl, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout, Scancode Map
-If Remap_LCmd_RCtrl = 0000000000000000020000001de05be000000000
-	return
-Else
-	RegWrite, Reg_Binary, HKLM, SYSTEM\CurrentControlSet\Control\Keyboard Layout, Scancode Map, 0000000000000000020000001de05be000000000
-	TrayTip Logout for key remap, Please logout or restart your computer in order for the key remap (LCmd to RCtrl) to take effect,, 1
+Menu, Tray, Tip, CampKeys
+Menu, Tray, Add, Clear Remap, Clear_Remap
+return
 
-; #Include CampKeys_GUI.ahk
+Clear_Remap:
+{
+	MsgBox, 1, Clear Remap, Clearing remap (LCmd to RCtrl), continue?
+	IfMsgBox, Cancel
+	{
+		return
+	}
+	RegDelete, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout, Scancode Map
+	MsgBox CampKeys succesfully uninstalled! Please logout or restart for the key remap (LCmd to Rctrl) to reset.
+}
 
 ;;───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ;; Mac keyboard shortcuts

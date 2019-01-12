@@ -10,8 +10,8 @@ Gui Font, q5 s9, Roboto
 Gui Add, Tab3,, General|App-Specific|Extras|Custom
 ;; General Tab
 Gui Add, GroupBox, Section, Remap
-RegRead, SwapCmdCtrl, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout, Scancode Map
-If SwapCmdCtrl = 0000000000000000020000001de05be000000000
+RegRead, Remap_LCmdRCtrl, HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout, Scancode Map
+If Remap_LCmdRCtrl = 0000000000000000020000001de05be000000000
   Checktype := "Checked1"
 Else
   Checktype := "Checked0"
@@ -51,16 +51,16 @@ return
 GuiClose:
 GuiEscape:
 Gui, Submit  ; Save each control's contents to its associated variable.
-; MsgBox SwapCmdCtrlSetting: %SwapCmdCtrlSetting% SwapCmdCtrl: %SwapCmdCtrl%
+; MsgBox Remap_LCmdRCtrlSetting: %Remap_LCmdRCtrlSetting% Remap_LCmdRCtrl: %Remap_LCmdRCtrl%
 
-If (SwapCmdCtrlSetting = 1 && SwapCmdCtrl = "")
+If (Remap_LCmdRCtrlSetting = 1 && Remap_LCmdRCtrl = "")
 {
   RegWrite, REG_BINARY, HKLM, SYSTEM\CurrentControlSet\Control\Keyboard Layout, Scancode Map, 0000000000000000020000001de05be000000000
-  TrayTip, CampKeys, You've made a system level key remap! Please logout or restart for changes to take affect.
+  TrayTip, CampKeys, You've made a system level key Remap_! Please logout or restart for changes to take affect.
 }
 
-If (SwapCmdCtrlSetting = 0 AND SwapCmdCtrl = "0000000000000000020000001de05be000000000")
+If (Remap_LCmdRCtrlSetting = 0 AND Remap_LCmdRCtrl = "0000000000000000020000001de05be000000000")
 {
   RegDelete, HKLM, SYSTEM\CurrentControlSet\Control\Keyboard Layout, Scancode Map
-  TrayTip, CampKeys, You've made a system level key remap! Please logout or restart for changes to take affect.
+  TrayTip, CampKeys, You've made a system level key Remap_! Please logout or restart for changes to take affect.
 }
