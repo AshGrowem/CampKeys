@@ -10,7 +10,7 @@ Contributions and feedback are more than welcome!
 
 ### Inspiration
 
-In my discovery of using Boot Camp to play games on my Macbook I was sad to see that not all of the Mac-specific keys were remapped (Mission Control, Launchpad), and there was zero support for Mac-style keyboard shortcuts. Having to re-learn all of the handy shortcuts I had used daily as a Mac developer was a headache. Not to mention that all of the Boot Camp Windows-style shortcuts wouldn't easily carry over to a regular Windows keyboard since they are layed out differently. I decided could NOT give up my Mac keyboard shortcuts!
+In my exploration of using Boot Camp to play Windows games I noticed that some Mac-specific keys were not working (Mission Control, Launchpad), and there was zero support for Mac-style keyboard shortcuts (⌘ replaced with ctrl). Having to re-learn all of the handy shortcuts I had used daily as a developer on Mac was a headache. Not to mention that all the Boot Camp Windows-style shortcuts I was learning wouldn't easily carry over to a regular Windows keyboard since they are layed out differently. I decided could NOT give up my Mac keyboard shortcuts!
 
 ## Install
 
