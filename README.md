@@ -1,10 +1,10 @@
 # CampKeys
 
-⌘ Mac-style keyboard shortcuts for [Boot Camp](https://support.apple.com/boot-camp).
+⌘ Mac-style keyboard shortcuts for Windows.
 
 ## About
 
-An open source app for Mac-style Boot Camp shortcuts. Made with :purple_heart: using [AutoHotkey](https://www.autohotkey.com/)!
+An open source app for Mac-style Windows shortcuts. Made with :purple_heart: using [AutoHotkey](https://www.autohotkey.com/)!
 
 Contributions and feedback are more than welcome!
 
