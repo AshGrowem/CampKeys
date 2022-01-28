@@ -47,6 +47,7 @@ Ex. Command-C for "copy" is supported because the Left-Command key is remapped t
 - \***Command-F**: Find items in a document or open a Find window.
 - \***Command-G**: Find Again: Find the next occurrence of the item previously found. To find the previous occurrence, press Shift-Command-G.
 - **Command-H**: Hide the windows of the front app. To view the front app but hide all other apps, press Option-Command-H.
+> ⚠️ WARNING: Hide will most likely quit your application without saving progress! I have not yet found an app that hides the way a Mac does (hiding window without quitting)
 - **Command-M**: Minimize the front window to the Dock. To minimize all windows of the front app, press Option-Command-M.
 - \***Command-P**: Print the current document.
 - \***Command-S**: Save the current document.
