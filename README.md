@@ -4,7 +4,7 @@
 
 ## About
 
-An open source app for Mac-style Windows shortcuts. Made with :purple_heart: using [AutoHotkey](https://www.autohotkey.com/)!
+An open source key remapper for Mac-style keyboard shortcuts on Windows. Made with :purple_heart: using [AutoHotkey](https://www.autohotkey.com/)!
 
 Contributions and feedback are more than welcome!
 
