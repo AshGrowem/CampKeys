@@ -15,8 +15,7 @@ In my exploration of using Boot Camp to play Windows games I noticed that some M
 ## Install
 
 ### Exe
-
-https://github.com/ashrafhadden/CampKeys/releases/download/v0.1.0/CampKeys.exe
+[https://github.com/AshGrowem/CampKeys/releases/download/v0.3.0/CampKeys.exe](https://github.com/AshGrowem/CampKeys/releases/download/v0.3.0/CampKeys.exe)
 
 ## Supported Keyboard Shortcuts
 
