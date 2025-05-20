@@ -169,8 +169,8 @@ return
 ;; Mouse Buttons
 ; button 1 usually starts at button furthest back on mouse
 #IfWinNotActive, Overwatch
-XButton1::Ctrl ; Remap mouse button 1 to Ctrl
-XButton2::Alt ; Remap mouse button 2 to Alt
+#XButton1::Ctrl ; Remap mouse button 1 to Ctrl
+#XButton2::Alt ; Remap mouse button 2 to Alt
 #IfWinNotActive
 
 ;; Window Snapping
